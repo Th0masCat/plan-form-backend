@@ -14,13 +14,15 @@ class Plan(models.Model):
         (1, 'Arcade'),
         (2, 'Advanced'),
         (3, 'Pro'),
+        
     )
-    
+
     plan_name = models.CharField(max_length=10, choices=PLAN_CHOICES, default=1)
     plan_duration_is_monthly = models.BooleanField(default=True)
     online_service = models.BooleanField(default=False)
     larger_storage = models.BooleanField(default=False)
     customizable_profile = models.BooleanField(default=False)
+    total_cost = models.IntegerField(default=9)
     
     def __str__(self):
         return self.plan_name
