@@ -1,0 +1,1 @@
+web: gunicorn 'plans_backend.wsgi'
